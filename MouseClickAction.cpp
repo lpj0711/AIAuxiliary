@@ -5,5 +5,5 @@ using namespace std;
 
 void move_mouse(int x,int y) {
 	SetCursorPos(x, y);
-	Sleep(1000);
+	Sleep(100);
 }
