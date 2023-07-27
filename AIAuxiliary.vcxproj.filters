@@ -24,9 +24,15 @@
     <ClCompile Include="MouseClickAction.cpp">
       <Filter>源文件\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="NewBadPersonAuxiliary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MouseClickAction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NewBadPersonAuxiliary.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

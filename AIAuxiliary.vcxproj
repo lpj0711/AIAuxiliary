@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="ApplicationMain.cpp" />
     <ClCompile Include="MouseClickAction.cpp" />
+    <ClCompile Include="NewBadPersonAuxiliary.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MouseClickAction.h" />
+    <ClInclude Include="NewBadPersonAuxiliary.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AIAuxiliary.rc" />
