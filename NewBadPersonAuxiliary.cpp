@@ -4,6 +4,7 @@
 #include <iostream>  
 #include <string> 
 #include<map>
+#include<Windows.h>
 using namespace std;
 
 map<string, int> keypad = { {"a" , 97},{"b" , 98},{"c" , 99},{"d" , 100},{"e" , 101},{"f" , 102},{"g" , 103},{"h" , 104},{"i" , 105},{"j" , 106},
@@ -28,6 +29,7 @@ void skipTheStory() {
 			}
 		}
 		moveMouseAndClick(100, 1000);
+		Sleep(5000);
 	}	
 }
 

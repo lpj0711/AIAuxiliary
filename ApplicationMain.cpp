@@ -1,9 +1,9 @@
 #include<stdio.h>
-#include"MouseClickAction.h"
+#include"NewBadPersonAuxiliary.h"
 #include <iostream>
 int main(int argc, char* argv[])
 {   
-    moveMouseAndClick(100, 1000);
+    runGame();
     //єЇКэМе
     return 0;
 }

@@ -5,7 +5,6 @@ using namespace std;
 
 void moveMouse(int x,int y) {
 	SetCursorPos(x, y);
-	Sleep(100);
 }
 
 /*SendInput函数是 Win32 API 中用于模拟输入事件的函数，可以模拟鼠标事件、键盘事件、硬件事件

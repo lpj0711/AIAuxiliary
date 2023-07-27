@@ -135,9 +135,6 @@
     <ClInclude Include="MouseClickAction.h" />
     <ClInclude Include="NewBadPersonAuxiliary.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="AIAuxiliary.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
