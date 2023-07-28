@@ -7,17 +7,61 @@
 #include<Windows.h>
 using namespace std;
 
-map<string, int> keypad = { {"a" , 97},{"b" , 98},{"c" , 99},{"d" , 100},{"e" , 101},{"f" , 102},{"g" , 103},{"h" , 104},{"i" , 105},{"j" , 106},
+map<string, int> keypadDict = { {"a" , 97},{"b" , 98},{"c" , 99},{"d" , 100},{"e" , 101},{"f" , 102},{"g" , 103},{"h" , 104},{"i" , 105},{"j" , 106},
 							{"k" , 107},{"l" , 108},{"m" , 109},{"n" , 110},{"o" , 111},{"p" , 112},{"q" , 113},{"r" , 114},{"s" , 115},{"t" , 116},
 							{"u" , 117},{"v" , 118},{"w" , 119},{"x" , 120},{"y" , 121},{"z" , 122},{"esc" , 27},
 							{"0" , 48},{"1" , 49},{"2" , 50}, {"3" , 51},{"4" , 52},{"5" , 53}, {"6" , 54},{"7" , 55},{"8" , 56},{"9" , 57}, 
 							{"`" , 96},{"-" , 45},{"=" , 61}, {"back space" , 8},{"tab" , 9},{"[" , 161}, {"]" , 191},{"enter" , 13},{"del" , 224}};
+/*
+	跳过镜头
+*/
+void jumpTheStory(int number) {
+	for (int i = 0; i < number; i++)
+	{
+		moveMouseAndClick(256, 605);
+		Sleep(1000 * 0.2);
+	}
+}
+
+/*
+	主线任务
+*/
+void mainLines() {
+	//剧情
+	moveMouseAndClick(45, 910);
+	Sleep(1000 * 1);
+	//剧情
+	moveMouseAndClick(127, 910);
+	Sleep(1000*1);
+	//挑战
+	moveMouseAndClick(265, 712);
+	Sleep(1000*1);
+	//跳过镜头
+	jumpTheStory(20);
+	//出战
+	moveMouseAndClick(257, 898);
+	Sleep(1000 * 15);
+	moveMouseAndClick(179, 748);
+	//空白关闭
+	moveMouseAndClick(256, 867);
+	Sleep(1000 * 2);
+	//跳过镜头
+	jumpTheStory(10);
+}
+/*
+登陆账号
+*/
+void LoginGame() {
+	moveMouseAndClick(269, 805);
+	Sleep(5000);
+}
 
 /*
 跳过剧情
 */
 void skipTheStory() {
 	int keypad;
+	//LoginGame();
 	while (true)
 	{
 		if (_kbhit()) {//如果有按键按下，则_kbhit()函数返回真
@@ -28,8 +72,9 @@ void skipTheStory() {
 				break;
 			}
 		}
-		moveMouseAndClick(100, 1000);
-		Sleep(5000);
+		if (keypad == keypadDict["enter"]) {
+			mainLines();
+		}
 	}	
 }
 
