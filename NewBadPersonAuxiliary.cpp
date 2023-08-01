@@ -12,13 +12,14 @@ map<string, int> keypadDict = { {"a" , 97},{"b" , 98},{"c" , 99},{"d" , 100},{"e
 							{"u" , 117},{"v" , 118},{"w" , 119},{"x" , 120},{"y" , 121},{"z" , 122},{"esc" , 27},
 							{"0" , 48},{"1" , 49},{"2" , 50}, {"3" , 51},{"4" , 52},{"5" , 53}, {"6" , 54},{"7" , 55},{"8" , 56},{"9" , 57}, 
 							{"`" , 96},{"-" , 45},{"=" , 61}, {"back space" , 8},{"tab" , 9},{"[" , 161}, {"]" , 191},{"enter" , 13},{"del" , 224}};
+Mouse_Click_Action mca;
 /*
 	跳过镜头
 */
 void jumpTheStory(int number) {
 	for (int i = 0; i < number; i++)
 	{
-		moveMouseAndClick(256, 605);
+		mca.moveMouseAndClick(256, 605);
 		Sleep(1000 * 0.2);
 	}
 }
@@ -28,22 +29,22 @@ void jumpTheStory(int number) {
 */
 void mainLines() {
 	//剧情
-	moveMouseAndClick(45, 910);
+	mca.moveMouseAndClick(45, 910);
 	Sleep(1000 * 1);
 	//剧情
-	moveMouseAndClick(127, 910);
+	mca.moveMouseAndClick(127, 910);
 	Sleep(1000*1);
 	//挑战
-	moveMouseAndClick(265, 712);
+	mca.moveMouseAndClick(265, 712);
 	Sleep(1000*1);
 	//跳过镜头
 	jumpTheStory(20);
 	//出战
-	moveMouseAndClick(257, 898);
+	mca.moveMouseAndClick(257, 898);
 	Sleep(1000 * 15);
-	moveMouseAndClick(179, 748);
+	mca.moveMouseAndClick(179, 748);
 	//空白关闭
-	moveMouseAndClick(256, 867);
+	mca.moveMouseAndClick(256, 867);
 	Sleep(1000 * 2);
 	//跳过镜头
 	jumpTheStory(10);
@@ -52,7 +53,7 @@ void mainLines() {
 登陆账号
 */
 void LoginGame() {
-	moveMouseAndClick(269, 805);
+	mca.moveMouseAndClick(269, 805);
 	Sleep(5000);
 }
 
@@ -78,6 +79,23 @@ void skipTheStory() {
 	}	
 }
 
-void runGame() {
+void New_Bad_Person_Auxiliary::runGame() {
 	skipTheStory();
+}
+
+void New_Bad_Person_Auxiliary::keyDown(int keyWord) {
+	int keypad;
+	while (true)
+	{
+		if (_kbhit()) {//如果有按键按下，则_kbhit()函数返回真
+			keypad = _getch();
+			cout << to_string(keypad) << endl;
+			if (keypad == 27)
+			{
+				break;
+			}
+		}
+		keybd_event(keyWord, 0, 0, 0); //按下F键
+		Sleep(1000 * 3);
+	}
 }

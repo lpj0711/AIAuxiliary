@@ -1,3 +1,11 @@
-#include <iostream>
-//鼠标移动到固定的位置，并且等待1秒
-void moveMouseAndClick(int x, int y);
+#ifndef MOUSECLICKACTION_H
+#define MOUSECLICKACTION_H
+class Mouse_Click_Action
+{
+public:
+	void moveMouseAndClick(int x, int y);
+
+private:
+
+};
+#endif 

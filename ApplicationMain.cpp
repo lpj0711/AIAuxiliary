@@ -3,7 +3,8 @@
 #include <iostream>
 int main(int argc, char* argv[])
 {   
-    runGame();
+    New_Bad_Person_Auxiliary nbpa;
+    nbpa.keyDown(70);
     //єЇКэМе
     return 0;
 }

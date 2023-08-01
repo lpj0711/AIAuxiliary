@@ -3,11 +3,16 @@
 
 using namespace std;
 
+/*
+   移动鼠标到指定位置
+*/
 void moveMouse(int x,int y) {
 	SetCursorPos(x, y);
 }
 
-/*SendInput函数是 Win32 API 中用于模拟输入事件的函数，可以模拟鼠标事件、键盘事件、硬件事件
+/*
+*   鼠标点击事件
+    SendInput函数是 Win32 API 中用于模拟输入事件的函数，可以模拟鼠标事件、键盘事件、硬件事件
     等。
     其函数原型如下：
         UINT SendInput(UINT nInputs, LPINPUT pInputs, int cbSize);
@@ -27,7 +32,10 @@ void mousClick() {
     input.mi.time = 0;          //time字段是用来设置时间戳的，0表示使用系统的时间戳
     SendInput(1, &input, sizeof(INPUT));
 }
-void moveMouseAndClick(int x, int y) {
+/*
+    鼠标移动到指定位置并且点击
+*/
+void Mouse_Click_Action::moveMouseAndClick(int x, int y) {
     moveMouse(x,y);
     mousClick();
 }
