@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>D:\Cwork\paddle_inference\paddle\lib;D:\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -118,20 +121,36 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Cwork\AIAuxiliary;D:\opencv\build\include;D:\Cwork\paddle_inference\paddle\include;D:\opencv\build\include\opencv2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world480.lib;paddle_inference.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationMain.cpp" />
     <ClCompile Include="MouseClickAction.cpp" />
     <ClCompile Include="NewBadPersonAuxiliary.cpp" />
+    <ClCompile Include="src\clipper.cpp" />
+    <ClCompile Include="src\ocr_det.cpp" />
+    <ClCompile Include="src\ocr_rec.cpp" />
+    <ClCompile Include="src\paddleocr.cpp" />
+    <ClCompile Include="src\postprocess_op.cpp" />
+    <ClCompile Include="src\preprocess_op.cpp" />
+    <ClCompile Include="src\utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\clipper.h" />
+    <ClInclude Include="include\ocr_det.h" />
+    <ClInclude Include="include\ocr_rec.h" />
+    <ClInclude Include="include\paddleocr.h" />
+    <ClInclude Include="include\postprocess_op.h" />
+    <ClInclude Include="include\preprocess_op.h" />
+    <ClInclude Include="include\utility.h" />
     <ClInclude Include="MouseClickAction.h" />
     <ClInclude Include="NewBadPersonAuxiliary.h" />
   </ItemGroup>

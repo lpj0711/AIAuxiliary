@@ -23,12 +23,54 @@
     <ClCompile Include="NewBadPersonAuxiliary.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\clipper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ocr_det.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ocr_rec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\paddleocr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\postprocess_op.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\preprocess_op.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MouseClickAction.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="NewBadPersonAuxiliary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\clipper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ocr_det.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ocr_rec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\paddleocr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\postprocess_op.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\preprocess_op.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utility.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

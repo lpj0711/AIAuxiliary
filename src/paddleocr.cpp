@@ -27,7 +27,7 @@ namespace PaddleOCR {
     string image_dir= "";
     string type= "ocr";
     // detection related
-    string det_model_dir= "D:/Cwork/AIAuxiliary/source/ch_PP-OCRv3_det_infer";
+    string det_model_dir= "D:/Cwork/source/ch_PP-OCRv3_det_infer";
     string limit_type= "max";
     int32_t limit_side_len= 960;
     double det_db_thresh= 0.3;
@@ -37,9 +37,9 @@ namespace PaddleOCR {
     string det_db_score_mode= "slow";
     bool visualize= true;
     // recognition related
-    string rec_model_dir= "D:/Cwork/AIAuxiliary/source/ch_PP-OCRv3_rec_infer";
+    string rec_model_dir= "D:/Cwork/source/ch_PP-OCRv3_rec_infer";
     int32_t rec_batch_num= 6;
-    string rec_char_dict_path= "D:/Cwork/AIAuxiliary/source/ppocr_keys_v1.txt";
+    string rec_char_dict_path= "D:/Cwork/source/ppocr_keys_v1.txt";
     int32_t rec_img_h= 48;
     int32_t rec_img_w=320;
    
