@@ -44,6 +44,9 @@
     <ClCompile Include="src\utility.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GetAndOpreateWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MouseClickAction.h">
@@ -71,6 +74,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="include\utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetAndOpreateWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

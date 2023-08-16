@@ -133,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationMain.cpp" />
+    <ClCompile Include="GetAndOpreateWindow.cpp" />
     <ClCompile Include="MouseClickAction.cpp" />
     <ClCompile Include="NewBadPersonAuxiliary.cpp" />
     <ClCompile Include="src\clipper.cpp" />
@@ -144,6 +145,7 @@
     <ClCompile Include="src\utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GetAndOpreateWindow.h" />
     <ClInclude Include="include\clipper.h" />
     <ClInclude Include="include\ocr_det.h" />
     <ClInclude Include="include\ocr_rec.h" />
